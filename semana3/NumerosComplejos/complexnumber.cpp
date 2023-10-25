@@ -1,8 +1,9 @@
 #include "complexnumber.h"
+#include <iostream>
 
 // parametros por defecto
 ComplexNumber::ComplexNumber(int real,
-    int imaginary)
+                             int imaginary)
 {
     this->_imaginary = imaginary;
     this->_real = real;
@@ -10,8 +11,10 @@ ComplexNumber::ComplexNumber(int real,
 
 // valor de retorno
 ComplexNumber
-    ComplexNumber::operator+(ComplexNumber& obj){
+ComplexNumber::operator+(ComplexNumber &obj)
+{
     ComplexNumber resultado(this->_real + obj._real,
-        this->_imaginary + obj._imaginary);
+                            this->_imaginary + obj._imaginary);
+    std::cout << "Hola Mundo - JH";
     return resultado;
 }
